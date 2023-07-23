@@ -12,6 +12,7 @@ public class BusTicketBackendApplication {
 //>>>>>>> main
     public static void main(String[] args) {
         SpringApplication.run(BusTicketBackendApplication.class, args);
+        // new line
     }
 
 }
