@@ -8,6 +8,7 @@ public class BusTicketBackendApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(BusTicketBackendApplication.class, args);
+        // new line
     }
 
 }
