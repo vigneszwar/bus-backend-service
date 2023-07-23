@@ -4,12 +4,12 @@ public class UserID {
     public static <args> void main(String[] args) {
 
 
-        private String username;
+        private String Username;
         private String email;
-        private String Password;
-        private String First_Name;
-        private String Last_Name;
-        private int Phone_number;
+        private String password;
+        private String FirstName;
+        private String LastName;
+        private int Phonenumber;
         private String Address;
     }
 
