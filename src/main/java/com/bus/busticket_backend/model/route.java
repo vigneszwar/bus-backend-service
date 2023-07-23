@@ -43,4 +43,3 @@ public class route {
                 ", Distance: " + distance + " km, Duration: " + duration + " hours, Available Seats: " + availableSeats;
     }
 }
-}

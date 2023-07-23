@@ -1,6 +1,23 @@
 package com.bus.busticket_backend.model;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.hibernate.annotations.ValueGenerationType;
+
 import java.util.Date;
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
 public class paymentDetails {
+    @Id
+
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
+
         private int paymentID;
         private int bookingID;
         private double amount;
@@ -8,21 +25,7 @@ public class paymentDetails {
         private String paymentMethod;
         private boolean isPaid;
 
-        // Constructors
-        public paymentDetails() {
-            // Default constructor
-        }
-
-        public paymentDetails(int paymentID, int bookingID, double amount, Date paymentDate, String paymentMethod, boolean isPaid) {
-            this.paymentID = paymentID;
-            this.bookingID = bookingID;
-            this.amount = amount;
-            this.paymentDate = paymentDate;
-            this.paymentMethod = paymentMethod;
-            this.isPaid = isPaid;
-        }
-
-        // Getters and Setters
+    // Getters and Setters
         public int getPaymentID() {
             return paymentID;
         }

@@ -1,7 +1,20 @@
 package com.bus.busticket_backend.model;
-import java.util.Date;
-public class BookingTicket {
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import java.util.Date;
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
+public class BookingTicket {
+@Id
+@GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long bookingId;
 
     private int userId;
@@ -11,21 +24,7 @@ public class BookingTicket {
     private int seatNumber;
     private String bookingStatus;
 
-    public BookingTicket() {
-        // Default constructor
-    }
-public  BookingTicket(Long bookingId,int userId,int busID,int routeID,Date bookingDate,int seatNumber,String bookingStatus)
-{
-    this.bookingId = bookingId;
-    this.userId = userId;
-    this.busID = busID;
-    this.routeID =routeID;
-    this.bookingDate = bookingDate;
-    this.seatNumber = seatNumber;
-    this.bookingStatus = bookingStatus;
-}
-
-public Long getBookingId()
+    public Long getBookingId()
 {
     return bookingId;
 }
