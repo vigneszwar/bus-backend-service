@@ -2,7 +2,7 @@ package com.bus.busticket_backend.model;
 import java.util.Date;
 public class Review {
 
-    //Reiew
+    //Review
     private int reviewID;
     private int userID;
     private int busID;
