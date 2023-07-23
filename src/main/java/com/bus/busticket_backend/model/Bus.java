@@ -7,7 +7,7 @@ public class Bus {
     private String driverName;
     private String driverContact;
 
-
+    //bus class
     public Bus(String busName, String busNumber, int capacity, String driverName, String driverContact) {
         this.busName = busName;
         this.busNumber = busNumber;
