@@ -1,4 +1,4 @@
-package model;
+package com.bus.busticket_backend.model;
 import java.util.Date;
 public class paymentDetails {
         private int paymentID;
