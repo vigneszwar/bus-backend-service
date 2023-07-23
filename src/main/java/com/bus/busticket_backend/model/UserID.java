@@ -1,4 +1,4 @@
-package model;
+package com.bus.busticket_backend.model;
 
 public class UserID {
     public static <args> void main(String[] args) {
