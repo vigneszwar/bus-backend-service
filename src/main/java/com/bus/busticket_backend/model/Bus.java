@@ -1,4 +1,4 @@
-package model;
+package com.bus.busticket_backend.model;
 
 public class Bus {
     private String busName;          // Primary Key
@@ -47,7 +47,7 @@ public class Bus {
     public void setDriverName(String driverName) {
         this.driverName = driverName;
     }
-
+    //book
     public String getDriverContact() {
         return driverContact;
     }
