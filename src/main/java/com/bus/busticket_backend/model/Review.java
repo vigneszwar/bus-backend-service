@@ -1,6 +1,24 @@
 package com.bus.busticket_backend.model;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.util.Date;
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+
 public class Review {
+
+    @Id
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
 
     //Review 123
     private int reviewID;
@@ -9,16 +27,6 @@ public class Review {
     private int rating;
     private String comment;
     private Date reviewDate;
-
-
-    public Review(int reviewID, int userID, int busID, int rating, String comment, Date reviewDate) {
-        this.reviewID = reviewID;
-        this.userID = userID;
-        this.busID = busID;
-        this.rating = rating;
-        this.comment = comment;
-        this.reviewDate = reviewDate;
-    }
 
 
     public int getReviewID() {

@@ -1,6 +1,25 @@
 package com.bus.busticket_backend.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Entity
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+
 public class route {
+
+    @Id
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
+
     private int routeId;
     private String origin;
     private String destination;
@@ -8,14 +27,6 @@ public class route {
     private double duration;
     private int availableSeats;
 
-    public route(int routeId, String origin, String destination, double distance, double duration, int availableSeats) {
-        this.routeId = routeId;
-        this.origin = origin;
-        this.destination = destination;
-        this.distance = distance;
-        this.duration = duration;
-        this.availableSeats = availableSeats;
-    }
     public int getRouteId() {
         return routeId;
     }
@@ -43,4 +54,4 @@ public class route {
                 ", Distance: " + distance + " km, Duration: " + duration + " hours, Available Seats: " + availableSeats;
     }
 }
-}
+

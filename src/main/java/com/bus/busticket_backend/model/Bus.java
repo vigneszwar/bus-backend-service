@@ -1,20 +1,29 @@
 package com.bus.busticket_backend.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Entity
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Bus {
+
+    @Id
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
+
     private String busName;          // Primary Key
     private String busNumber;
     private int capacity;
     private String driverName;
     private String driverContact;
-
-
-    public Bus(String busName, String busNumber, int capacity, String driverName, String driverContact) {
-        this.busName = busName;
-        this.busNumber = busNumber;
-        this.capacity = capacity;
-        this.driverName = driverName;
-        this.driverContact = driverContact;
-    }
 
     public String getbusName() {
         return busName;
