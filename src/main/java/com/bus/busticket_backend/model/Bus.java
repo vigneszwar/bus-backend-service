@@ -55,7 +55,7 @@ public class Bus {
     public void setDriverContact(String driverContact) {
         this.driverContact = driverContact;
     }
-
+    //
     public String toString() {
         return "Bus{" +
                 "busName=" + busName +
